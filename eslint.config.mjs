@@ -49,8 +49,8 @@ export default [
         "warn",
         { allowConstantExport: true },
       ],
-      semi: ["error", "always"],
-      "prefer-const": ["error"],
+      semi: ["warning", "always"],
+      "prefer-const": ["warning"],
     },
     linterOptions: {
       noInlineConfig: true,

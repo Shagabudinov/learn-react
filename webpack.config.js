@@ -38,6 +38,10 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
+      {
+        test: /\.md$/,
+        use: ["html-loader", "markdown-loader"],
+      },
     ],
   },
   resolve: {
