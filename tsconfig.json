@@ -11,11 +11,20 @@
     "noFallthroughCasesInSwitch": true,
     "outDir": "dist/lib/",
     "sourceMap": true,
-    "jsx": "react"
+    "jsx": "react",
+    "preserveValueImports": false,
+    "importsNotUsedAsValues": "remove",
   },
   "exclude": ["node_modules", "dist"],
-  "include": ["src/**/*"],
+  "baseUrl": "./",
+  "paths": {
+    "@core/ui": ["src/ui"],
+  },
+  "typeRoots": [
+    "node_modules/@types",
+    "src/types"
+  ],
   "files": [
-    "./typings.d.ts"
+    "typings.d.ts"
   ]
 }

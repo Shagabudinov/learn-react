@@ -11,6 +11,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -46,10 +54,13 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js"],
+    alias: {
+      '@ui': path.resolve(__dirname, 'src/ui'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "dist", "index.html"),
+      template: path.resolve(__dirname, "src", "app", "index.html"),
     }),
   ],
   devServer: {
