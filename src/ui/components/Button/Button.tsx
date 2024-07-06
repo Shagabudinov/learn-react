@@ -7,11 +7,21 @@ interface ButtonProps {
   className?: string;
 }
 
+enum ButtonType {
+    Small = "small",
+    Default = "default",
+    Big = "big",
+}
+
 const Button: FC<ButtonProps> = ({ children, className }) => {
-  console.log(children)
   return (
     <button className={`${className} px-[32px] py-[16px] bg-accent rounded-full`}>{ children }</button>
   )
+}
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string
 }
 
 export default Button
