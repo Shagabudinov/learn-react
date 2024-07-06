@@ -30,7 +30,8 @@ declare module '*.svg' {
 
 declare module '@ui' {
   const Button: FC<ButtonProps>;
+  const ButtonSize: any;
   const Icon: FC<IconProps>;
   const Text: FC<TextProps>;
-  export { Button, Icon, Text };
+  export { Button, ButtonSize, Icon, Text };
 }
