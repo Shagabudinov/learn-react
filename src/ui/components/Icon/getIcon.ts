@@ -2,7 +2,7 @@ import React from 'react';
 import reactLogo from "../../assets/react-logo.png";
 
 export interface IconProps {
-  name: string;
+  name?: string;
   className?: string;
   [key: string]: any;
 }

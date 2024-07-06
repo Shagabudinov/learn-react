@@ -1,3 +1,4 @@
 export {
-  Icon
+  Icon,
+  Text
 } from "./components";
