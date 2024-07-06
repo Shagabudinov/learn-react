@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('./app/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf') format('ttf'),
+       url('./app/fonts/JetBrainsMono-VariableFont_wght.ttf') format('ttf');
+  /* Дополнительные форматы шрифтов могут быть добавлены здесь */
+  font-weight: normal;
+  font-style: normal;
+}
