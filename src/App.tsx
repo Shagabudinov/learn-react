@@ -1,6 +1,7 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import markdownContent from './content.md';
+import WelcomePage from './pages/WelcomePage';
 
 const Heading = ({ children, ...props }) => (
   <h1 className="text-2xl font-bold mb-4 text-red-500" {...props}>
@@ -9,7 +10,7 @@ const Heading = ({ children, ...props }) => (
 );
 
 const Paragraph = ({ children, ...props }) => (
-  <p className="text-base leading-7 text-red-500" {...props}>
+  <p className="text-base leading-7 text-red-500 " {...props}>
     {children}
   </p>
 );
@@ -17,8 +18,9 @@ const Paragraph = ({ children, ...props }) => (
 const App = () => {
   console.log(markdownContent)
   return (
-  <div className="p-4">
-    <h1 className="text-2xl font-bold mb-4 text-red-500">Markdown in React</h1>
+    <>
+      <WelcomePage />
+    {/* <h1 className="text-2xl font-bold mb-4 text-red-500">Markdown in React</h1>
     <Markdown
       options={{
         overrides: {
@@ -28,8 +30,8 @@ const App = () => {
       }}
     >
       {markdownContent}
-    </Markdown>
-  </div>
+    </Markdown> */}
+  </>
   )
 };
 
