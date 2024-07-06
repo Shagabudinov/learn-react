@@ -1,6 +1,6 @@
 import React from 'react';
 //
-import { Icon, Text } from '@ui';
+import { Button, Icon, Text } from '@ui';
 
 const WelcomePage = () => {
   console.log(Icon)
@@ -15,8 +15,16 @@ const WelcomePage = () => {
         <Text className='text-[36px] select-none'>Начни изучать React прямо сейчас!</Text>
         <Text className='text-[24px] select-none'>Отслеживай свой прогресс с помощью <Text>персонального аккаунта</Text></Text>
         <div className='flex gap-[96px]'>
-          <button className='text-[32px]'><Text>Войти</Text></button>
-          <button className='text-[32px]'><Text>Регистрация</Text></button>
+          <Button className='text-[32px]'>
+            <p className='text-primary text-[32px]'>
+              Войти
+            </p>
+          </Button>
+          <Button className='text-[32px]'>
+            <p className='text-primary text-[32px]'>
+              Регистрация
+            </p>
+          </Button>
         </div>
         <Text className='text-[24px] flex gap-2 select-none'>Или <Text className='underline cursor-pointer'>продолжить без аккаунта</Text></Text>
       </div>
