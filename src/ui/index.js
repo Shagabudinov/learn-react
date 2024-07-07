@@ -2,5 +2,8 @@ export {
   Button,
   ButtonSize,
   Icon,
-  Text
+  Text,
+  Header,
+  Footer,
+  OutletWithHeaderFooter,
 } from "./components";

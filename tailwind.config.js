@@ -3,12 +3,6 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    colors: {
-      'background': '#3A3A3A',
-      'primary': '#535353',
-      'accent': '#61DAFB',
-      'white': '#FFFFFF',
-    },
     fontSize: {
       sm: '0.8rem',
       base: '1rem',
@@ -18,6 +12,12 @@ module.exports = {
       '5xl': '3.052rem',
     },
     extend: {
+      colors: {
+        'background': '#3A3A3A',
+        'primary': '#535353',
+        'accent': '#61DAFB',
+        'white': '#FFFFFF',
+      },
       spacing: {
         '355': '355px',
         '408': '408px',

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { Children } from 'react';
 import Markdown from 'markdown-to-jsx';
 import WelcomePage from '../pages/WelcomePage';
 import {
   Routes,
   Route
 } from "react-router-dom";
+import MainPage from '../pages/MainPage';
+import { Footer, Header, OutletWithHeaderFooter } from '../ui';
 
 const Heading = ({ children, ...props }) => (
   <h1 className="text-2xl font-bold mb-4 text-red-500" {...props}>
@@ -21,9 +23,11 @@ const Paragraph = ({ children, ...props }) => (
 const App = () => {
   return (
     <>
+      
       <Routes>
-        <Route path='/' element={<WelcomePage/>} />
+        <Route path='/' element={<OutletWithHeaderFooter><MainPage/></OutletWithHeaderFooter>} />
       </Routes>
+      
       {/* <WelcomePage /> */}
     {/* <h1 className="text-2xl font-bold mb-4 text-red-500">Markdown in React</h1>
     <Markdown
