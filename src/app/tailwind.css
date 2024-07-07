@@ -9,5 +9,7 @@
 
 * {
   /* border: red solid 1px; */
-  font-family: 'MyCustomFont', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+  padding: 0;
 }

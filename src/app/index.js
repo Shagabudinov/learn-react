@@ -6,7 +6,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './tailwind.css';
-import './fonts.css';
 
 const router = createBrowserRouter([
   {

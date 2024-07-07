@@ -22,9 +22,6 @@ module.exports = {
         '355': '355px',
         '408': '408px',
       },
-      fontSize: {
-        'chlen': '2rem',
-      },
     },
   },
   plugins: [],
