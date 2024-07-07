@@ -1,6 +1,10 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import WelcomePage from '../pages/WelcomePage';
+import {
+  Routes,
+  Route
+} from "react-router-dom";
 
 const Heading = ({ children, ...props }) => (
   <h1 className="text-2xl font-bold mb-4 text-red-500" {...props}>
@@ -17,7 +21,10 @@ const Paragraph = ({ children, ...props }) => (
 const App = () => {
   return (
     <>
-      <WelcomePage />
+      <Routes>
+        <Route path='/' element={<WelcomePage/>} />
+      </Routes>
+      {/* <WelcomePage /> */}
     {/* <h1 className="text-2xl font-bold mb-4 text-red-500">Markdown in React</h1>
     <Markdown
       options={{
