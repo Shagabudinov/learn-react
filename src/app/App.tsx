@@ -1,12 +1,9 @@
-import React, { Children } from 'react';
+import React, { useEffect, useState } from 'react';
 import Markdown from 'markdown-to-jsx';
 import WelcomePage from '../pages/WelcomePage';
-import {
-  Routes,
-  Route
-} from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 import MainPage from '../pages/MainPage';
-import { Footer, Header, OutletWithHeaderFooter } from '../ui';
+import { OutletWithHeaderFooter } from '../ui';
 
 const Heading = ({ children, ...props }) => (
   <h1 className="text-2xl font-bold mb-4 text-red-500" {...props}>
@@ -20,28 +17,29 @@ const Paragraph = ({ children, ...props }) => (
   </p>
 );
 
-const App = () => {
+const App: React.FC = () => {
+  const [isShouldRedirectToWelcome, setIsShouldRedirectToWelcome] = useState(
+    localStorage.getItem('isShouldRedirectToWelcome') === 'true',
+  );
+
   return (
-    <>
-      
-      <Routes>
-        <Route path='/' element={<OutletWithHeaderFooter><MainPage/></OutletWithHeaderFooter>} />
-      </Routes>
-      
-      {/* <WelcomePage /> */}
-    {/* <h1 className="text-2xl font-bold mb-4 text-red-500">Markdown in React</h1>
-    <Markdown
-      options={{
-        overrides: {
-          h1: { component: Heading },
-          p: { component: Paragraph },
-        },
-      }}
-    >
-      {markdownContent}
-    </Markdown> */}
-  </>
-  )
+    <Routes>
+      {isShouldRedirectToWelcome === true ? (
+        <Route
+          path="/"
+          element={
+            <WelcomePage
+              setIsShouldRedirectToWelcome={setIsShouldRedirectToWelcome}
+            />
+          }
+        />
+      ) : (
+        <Route element={<OutletWithHeaderFooter />}>
+          <Route path="/" element={<MainPage />} />
+        </Route>
+      )}
+    </Routes>
+  );
 };
 
 export default App;

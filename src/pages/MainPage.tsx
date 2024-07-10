@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const MainPage = () => {
   return (
     <div>
       <p>
         This is some long text that will be wrapped correctly inside the
-        container. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-        vitae elit libero, a pharetra augue. Donec ullamcorper nulla non metus
-        auctor fringilla. Curabitur blandit tempus porttitor.
+        container. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nulla vitae elit libero, a pharetra augue. Donec ullamcorper nulla non
+        metus auctor fringilla. Curabitur blandit tempus porttitor.
       </p>
       <p>test</p>
       <p>test</p>
@@ -26,9 +27,8 @@ const MainPage = () => {
       <p>test</p>
       <p>test</p>
       <p>test</p>
-
     </div>
-  )
-}
+  );
+};
 
-export default MainPage
+export default MainPage;

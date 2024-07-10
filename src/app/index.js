@@ -1,24 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React, { createContext, useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 import './tailwind.css';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-]);
+const isShouldRedirectToWelcome = localStorage.getItem('isShouldRedirectToWelcome');
+isShouldRedirectToWelcome ?? localStorage.setItem('isShouldRedirectToWelcome', 'true');
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <RouterProvider router={router}>
+createRoot(document.getElementById('root')).render(
+    <BrowserRouter>
       <App />
-    </RouterProvider>
-  </React.StrictMode>
+    </BrowserRouter>,
 );
