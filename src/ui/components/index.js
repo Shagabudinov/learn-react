@@ -5,6 +5,7 @@ import { ButtonSize } from './Button';
 import Header from './Header';
 import Footer from './Footer';
 import OutletWithHeaderFooter from './OutletWithHeaderFooter';
+import Switch from './Switch';
 
 export {
   Button,
@@ -14,4 +15,5 @@ export {
   Text,
   Footer,
   OutletWithHeaderFooter,
+  Switch,
 }

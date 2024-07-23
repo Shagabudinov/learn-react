@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 interface TextSettingsProps {
+  color?: string;
   bold?: string;
   isItalic?: boolean;
   isUnderLine?: boolean;
@@ -17,12 +18,18 @@ interface TextProps extends TextSettingsProps {
 const Text: FC<TextProps> = ({
   children,
   className,
+  color,
   bold,
   isItalic,
   isUnderLine,
 }) => {
   const getTextClasses = () => {
-    let classes = 'text-white block';
+    let classes = 'block';
+    if (color) {
+      classes += ` ${color}`;
+    } else {
+      classes += ` text-white`;
+    }
     if (className) classes += ` ${className}`;
     if (bold) classes += ` font-${bold}`;
     if (isItalic) classes += ' italic';

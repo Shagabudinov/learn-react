@@ -6,4 +6,5 @@ export {
   Header,
   Footer,
   OutletWithHeaderFooter,
+  Switch,
 } from "./components";
