@@ -33,5 +33,5 @@ declare module '@ui' {
   const ButtonSize: any;
   const Icon: FC<IconProps>;
   const Text: FC<TextProps>;
-  export { Button, ButtonSize, Icon, Text };
+  export { Button, ButtonSize, Icon, Text, TextWithDivider, CornerBox };
 }

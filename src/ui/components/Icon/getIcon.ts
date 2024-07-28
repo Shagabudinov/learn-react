@@ -1,6 +1,7 @@
 import React from 'react';
 import reactLogo from '../../assets/react-logo.png';
 import userIcon from '../../assets/user-icon.svg';
+import cancel from '../../assets/cancel.svg';
 
 export interface IconProps {
   name?: string;
@@ -11,6 +12,7 @@ export interface IconProps {
 const ICONS: Record<string, string | React.FC<any>> = {
   'react-logo': reactLogo,
   'user-icon': userIcon,
+  'cancel': cancel,
 };
 
 export default function getIcon(key: string, props: IconProps) {

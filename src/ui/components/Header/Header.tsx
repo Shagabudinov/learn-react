@@ -1,26 +1,32 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Icon from '../Icon';
 import Text from '../Text';
 import Switch from '../Switch';
 
 const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const switchOptions = [
     {
       optionTitle: 'Учебник',
-      isActive: true,
-      onChangeTitle: () => {},
+      path: '/',
     },
     {
       optionTitle: 'Мой прогресс',
-      isActive: false,
-      onChangeTitle: () => {},
+      path: '/progress',
     },
   ];
+
+  const handleSwitchChange = (path) => {
+    navigate(path);
+  };
+
   return (
     <>
       <div className="flex items-center justify-between w-full py-[4px] px-[8px] sticky">
-        <Link to={'/'} className="flex items-center">
+        <a href="/" className="flex items-center">
           <Icon name="react-logo" className="w-[48px] h-[40px]"></Icon>
           <span className="px-[8px]">
             <Text className="text-[24px] select-none">Learn React -</Text>
@@ -28,13 +34,20 @@ const Header = () => {
               Онлайн учебник по React.js
             </Text>
           </span>
-        </Link>
-        <Switch options={switchOptions}></Switch>
-        <div className='bg-primary p-2 rounded-full'>
-          <Icon name="user-icon"></Icon>
+        </a>
+        <Switch
+          options={switchOptions}
+          activePath={location.pathname}
+          onSwitchChange={handleSwitchChange}
+        />
+        <div className="flex gap-4 items-center">
+          <Text>Гость</Text>
+          <div className="bg-primary p-2 rounded-full">
+            <Icon name="user-icon"></Icon>
+          </div>
         </div>
       </div>
-      <div className="h-[2px] w-full bg-primary mt-1" />
+      <div className="h-[2px] w-full bg-primary mt-1 mb-2" />
     </>
   );
 };

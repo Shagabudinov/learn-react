@@ -7,4 +7,6 @@ export {
   Footer,
   OutletWithHeaderFooter,
   Switch,
-} from "./components";
+  TextWithDivider,
+  CornerBox,
+} from './components';

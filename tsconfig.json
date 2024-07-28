@@ -6,7 +6,7 @@
     "esModuleInterop": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "module": "es6",
+    "module": "ESNext",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "outDir": "dist/lib/",

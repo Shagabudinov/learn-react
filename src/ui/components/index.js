@@ -6,6 +6,8 @@ import Header from './Header';
 import Footer from './Footer';
 import OutletWithHeaderFooter from './OutletWithHeaderFooter';
 import Switch from './Switch';
+import TextWithDivider from './TextWithDivider';
+import CornerBox from './CornerBox';
 
 export {
   Button,
@@ -16,4 +18,6 @@ export {
   Footer,
   OutletWithHeaderFooter,
   Switch,
-}
+  TextWithDivider,
+  CornerBox,
+};

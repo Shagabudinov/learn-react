@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: 'development',
@@ -7,6 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -65,6 +68,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'app', 'public', 'index.html'),
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'server', // 'server' для автоматического открытия в браузере, 'static' для создания файла
+      openAnalyzer: true, // Не открывать автоматически в браузере
     }),
   ],
   devServer: {

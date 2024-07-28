@@ -12,4 +12,75 @@
   font-family: 'JetBrains Mono', monospace;
   margin: 0;
   padding: 0;
+  color: white;
 }
+
+/* Добавьте эти стили в ваш глобальный CSS файл (например, styles/globals.css) */
+@layer utilities {
+  .clip-triangle {
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+
+  .clip-br-triangle {
+    clip-path: polygon(100% 100%, 0 100%, 100% 0);
+  }
+}
+
+/* styles.css */
+h1 {
+  font-size: 2rem; /* размер шрифта для заголовка 1 уровня */
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem; /* размер шрифта для заголовка 2 уровня */
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem; /* размер шрифта для параграфа */
+}
+
+iframe {
+  margin: 1rem 0 1rem 0;
+}
+
+/* styles.css */
+
+.markdown-content {
+  padding: 0;
+}
+
+.markdown-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-content p {
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.markdown-content ol,
+.markdown-content ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.markdown-content li {
+  margin-bottom: 0.25rem;
+}
+
+
+
